@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Voice UI</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:500px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:#00ff99;border:none;}
+.card{background:#2d2d2d;margin-top:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Voice-Controlled Smart Home UI</h2>
+
+<button onclick="listen()">🎤 Speak Command</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function listen(){
+
+    let commands = [
+        "Turn off lights",
+        "Set thermostat to 22°C",
+        "Open curtains",
+        "Play music"
+    ];
+
+    let cmd = commands[Math.floor(Math.random()*commands.length)];
+
+    out.innerHTML = `
+    <div class="card">🎤 Command: ${cmd}</div>
+    <div class="card">✔ Action Executed in UI Prototype</div>
+    `;
+}
+</script>
+
+</body>
+</html>

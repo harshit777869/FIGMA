@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Logo Mockup</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:500px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+.logo{
+    font-size:40px;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+    background:#2d2d2d;
+}
+button{padding:10px;background:#00ff99;border:none;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Logo Design Variations</h2>
+
+<div id="logo" class="logo">BrandX</div>
+
+<button onclick="change()">Change Style</button>
+
+</div>
+
+<script>
+let styles = [
+"BrandX",
+"🔥 BrandX",
+"⚡ BrandX",
+"BrandX™",
+"💡 BrandX"
+];
+
+let i = 0;
+
+function change(){
+    i = (i+1)%styles.length;
+    logo.innerText = styles[i];
+}
+</script>
+
+</body>
+</html>

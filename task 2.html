@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Collaboration</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:500px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+.card{background:#2d2d2d;margin:10px;padding:10px;border-radius:8px;text-align:left;}
+button{padding:10px;background:#00ff99;border:none;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Team Collaboration</h2>
+
+<button onclick="add()">Add Comment</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+let users = ["Aman", "Ravi", "Neha", "Team Lead"];
+
+function add(){
+
+    let u = users[Math.floor(Math.random()*users.length)];
+    let msg = "Suggested UI improvement ✔";
+
+    out.innerHTML += `
+    <div class="card">
+    👤 ${u}<br>
+    💬 ${msg}
+    </div>`;
+}
+</script>
+
+</body>
+</html>

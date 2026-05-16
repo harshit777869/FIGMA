@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Page</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:500px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+.image{
+    width:200px;height:200px;
+    margin:auto;
+    background:#00ff99;
+    border-radius:10px;
+    transition:0.5s;
+}
+button{padding:10px;margin:5px;background:#00ff99;border:none;}
+.card{background:#2d2d2d;margin-top:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Product Page (360° View)</h2>
+
+<div id="img" class="image"></div>
+
+<button onclick="rotate()">Rotate</button>
+
+<div class="card">⭐ Rating: 4.5/5</div>
+<div class="card">💬 Customer Reviews: Excellent product</div>
+
+</div>
+
+<script>
+let angle = 0;
+
+function rotate(){
+    angle += 45;
+    img.style.transform = `rotate(${angle}deg)`;
+}
+</script>
+
+</body>
+</html>
